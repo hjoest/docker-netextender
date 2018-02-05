@@ -34,10 +34,10 @@ ENV JAVA_HOME /usr/lib/jvm/java-8-oracle
 
 RUN mkdir -p /build && \
   cd /build && \
-  wget https://sslvpn.demo.sonicwall.com/NetExtender.Linux.8.5.797.x86_64.tgz
+  wget -O NetExtender.Linux.8.6.801.x86_64.tgz https://goo.gl/jtVwo2
 
 RUN cd /build && \
-  tar xzvf NetExtender.Linux.8.5.797.x86_64.tgz && \
+  tar xzvf NetExtender.Linux.8.6.801.x86_64.tgz && \
   cd netExtenderClient && \
   ./install
 

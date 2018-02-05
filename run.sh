@@ -1,5 +1,7 @@
 #!/bin/sh
 
+mknod /dev/ppp c 108 0 || true
+
 for v in 'PROXY_USER' 'VPN_USER' 'VPN_DOMAIN' 'VPN_SERVER'; do
     if test -z $(eval "echo \$$v"); then
         echo "Missing env variable $v" >&2
